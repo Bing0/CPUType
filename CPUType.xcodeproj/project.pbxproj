@@ -14,6 +14,7 @@
 		D760322B1BBE05ED0092B37D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D76032291BBE05ED0092B37D /* LaunchScreen.storyboard */; };
 		D76032361BBE05ED0092B37D /* CPUTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76032351BBE05ED0092B37D /* CPUTypeTests.swift */; };
 		D76032411BBE05ED0092B37D /* CPUTypeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76032401BBE05ED0092B37D /* CPUTypeUITests.swift */; };
+		D76032621BBE50DA0092B37D /* GetType.m in Sources */ = {isa = PBXBuildFile; fileRef = D76032611BBE50DA0092B37D /* GetType.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,10 @@
 		D760323C1BBE05ED0092B37D /* CPUTypeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CPUTypeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D76032401BBE05ED0092B37D /* CPUTypeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPUTypeUITests.swift; sourceTree = "<group>"; };
 		D76032421BBE05ED0092B37D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D76032581BBE11BB0092B37D /* MobileGestalt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobileGestalt.h; sourceTree = "<group>"; };
+		D760325D1BBE50600092B37D /* CPUType-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPUType-Bridging-Header.h"; sourceTree = "<group>"; };
+		D76032601BBE50DA0092B37D /* GetType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetType.h; sourceTree = "<group>"; };
+		D76032611BBE50DA0092B37D /* GetType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetType.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +108,10 @@
 				D76032271BBE05ED0092B37D /* Assets.xcassets */,
 				D76032291BBE05ED0092B37D /* LaunchScreen.storyboard */,
 				D760322C1BBE05ED0092B37D /* Info.plist */,
+				D76032581BBE11BB0092B37D /* MobileGestalt.h */,
+				D760325D1BBE50600092B37D /* CPUType-Bridging-Header.h */,
+				D76032601BBE50DA0092B37D /* GetType.h */,
+				D76032611BBE50DA0092B37D /* GetType.m */,
 			);
 			path = CPUType;
 			sourceTree = "<group>";
@@ -187,11 +196,13 @@
 		D76032151BBE05ED0092B37D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = BinWu;
 				TargetAttributes = {
 					D760321C1BBE05ED0092B37D = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = JG7P2QYPN7;
 					};
 					D76032301BBE05ED0092B37D = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -257,6 +268,7 @@
 			files = (
 				D76032231BBE05ED0092B37D /* ViewController.swift in Sources */,
 				D76032211BBE05ED0092B37D /* AppDelegate.swift in Sources */,
+				D76032621BBE50DA0092B37D /* GetType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,10 +410,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CPUType/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Bingo.CPUType;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CPUType/CPUType-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -409,10 +427,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CPUType/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Bingo.CPUType;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CPUType/CPUType-Bridging-Header.h";
 			};
 			name = Release;
 		};
